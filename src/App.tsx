@@ -12,7 +12,7 @@ import LabDiseno from './pages/Laboratorios/DisenoEstructura';
 import RealidadVirtual from './pages/Laboratorios/RealidadVirtual';
 import FabLab from './pages/Laboratorios/Fablab';
 import Herramientas from './pages/Herramientas';
-import Test from './pages/Herramientas/Test';
+import Test from './pages/Herramientas/Test/';
 import './App.css';
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/Herramientas" element={<Herramientas />} />
             <Route path="/Herramientas/test" element={<Test/>} />
+            
           </Routes>
         </main>
         <Footer /> {/* Llamamos al componente Footer aquí */}
