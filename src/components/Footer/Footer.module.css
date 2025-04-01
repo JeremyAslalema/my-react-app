@@ -1,0 +1,108 @@
+.footer {
+  background-color: #006633;
+  color: white;
+  padding: 0.8rem 2rem; /* Reducido aún más el padding */
+  border-top: 3px solid #FFCE00;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+  position: absolute;
+  padding-top: 1%; /* Ajustado para reducir aún más la altura */
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem; /* Espaciado aún más reducido */
+  width: 100vw;
+  margin: 0;
+  align-items: start;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* logo principal alineado a la izquierda */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 350px; /* Aumentado más el tamaño */
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Contenedor para redes sociales y logo adicional */
+.socialMediaContainer {
+  display: flex;
+  align-items: center; /* Alinea el texto y la imagen en la misma línea */
+  justify-content: space-between; /* Espacia bien los elementos */
+  gap: 1rem; /* Espaciado entre texto y logo */
+}
+
+/* Estilos para el logo adicional alineado */
+.extraLogo {
+  width: 230px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  margin-top: -20px; 
+}
+.footerSection {
+  padding: 0 0.5rem;
+  text-align: left;
+}
+
+.footerSection h3 {
+  color: #FFCE00;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #FFCE0055;
+  padding-bottom: 0.4rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection li {
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.footerSection li:hover {
+  color: #FFCE00;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footerSection {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .footerSection h3 {
+    border-bottom: none;
+  }
+
+  .footerSection li:hover {
+    transform: none;
+  }
+
+  /* centrar los logos en pantallas pequeñas */
+  .logoContainer,
+  .socialMediaContainer {
+    justify-content: center;
+  }
+}
