@@ -9,7 +9,7 @@ const Test: React.FC = () => {
     {
       nombre: 'Test (Pro-Cálculo) - 6 años',
       descripcion: 'Ejercicios básicos de sumas y restas para niños de 6 años.',
-      enlace: '/test/pro-calculo-6',
+      enlace: '/test/ProCalculo6',
     },
     {
       nombre: 'Test (Pro-Cálculo) - 7 años',
