@@ -18,10 +18,13 @@
 /* Contenedor principal */
 .mediaContainer {
   min-height: 100vh;
+  width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
   background: linear-gradient(135deg, #f5f7fa 0%, #e0f0e5 100%);
   color: var(--color-text-dark);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Oculta cualquier overflow horizontal */
+  margin: 0;
+  padding: 0;
 }
 
 /* Fondo animado con símbolos matemáticos */
@@ -29,10 +32,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Usar viewport width */
+  height: 100vh; /* Usar viewport height */
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .mathSymbol {
@@ -146,10 +150,12 @@
 /* Contenedor de contenido */
 .contentContainer {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
   position: relative;
   z-index: 1;
+  overflow: hidden; /* Previene cualquier overflow */
 }
 
 /* Sección de indicaciones */
@@ -546,8 +552,14 @@
     font-size: 0.9rem;
   }
   
-  .instructionsGrid, .featuresGrid, .pruebasGrid, .testimonialsGrid {
-    grid-template-columns: 1fr;
+  .featuresGrid, .instructionsGrid, .pruebasGrid, .testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 0 1rem;
   }
 }
 

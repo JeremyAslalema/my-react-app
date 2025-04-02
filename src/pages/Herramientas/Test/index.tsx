@@ -122,9 +122,9 @@ const Test: React.FC = () => {
   }
 
   return (
-    <main className={styles.mediaContainer}>
+    <main className={styles.mediaContainer} style={{ width: '100vw', overflowX: 'hidden' }}>
       {/* Fondo animado */}
-      <div className={styles.animatedBackground}>
+      <div className={styles.animatedBackground} style={{ width: '100vw' }}>
         {Array.from({ length: 100 }).map((_, i) => (
           <motion.div
             key={i}
@@ -219,7 +219,7 @@ const Test: React.FC = () => {
       </motion.nav>
 
       {/* Contenido principal */}
-      <div className={styles.contentContainer}>
+      <div className={styles.contentContainer} style={{ maxWidth: '100%', padding: '1rem', boxSizing: 'border-box' }}>
         <AnimatePresence mode='wait'>
           {activeTab === 'indicaciones' && (
             <motion.section
